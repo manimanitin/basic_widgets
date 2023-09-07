@@ -32,7 +32,7 @@ class _CheckboxWidgetState extends State<CheckboxWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Tu mama es puta'),
+              const Text('Presioname'),
               Checkbox(
                 checkColor: Colors.white,
                 fillColor: MaterialStateProperty.resolveWith(getColor),
@@ -45,7 +45,7 @@ class _CheckboxWidgetState extends State<CheckboxWidget> {
               ),
             ],
           ),
-          (isChecked ? const Text('jaja q marica') : const Text('picale w')),
+          (isChecked ? const Text('Gracias') : const Text('presionale porfis')),
         ],
       ),
     );

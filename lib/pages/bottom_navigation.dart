@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'alert_button.dart';
 import 'card_widget.dart';
 import 'checkbox_widget.dart';
+import 'date_widget.dart';
 
 class BottomNavigationBarExampleApp extends StatelessWidget {
   const BottomNavigationBarExampleApp({super.key});
@@ -25,12 +26,13 @@ class BottomNavigationBarExample extends StatefulWidget {
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
-  /*static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);*/
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     AlertButton(),
     CardWidget(),
     CheckboxWidget(),
+    DatePickerWidget()
   ];
 
   void _onItemTapped(int index) {
@@ -43,7 +45,7 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar'),
+        title: const Text('Widgets básicos'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -62,9 +64,14 @@ class _BottomNavigationBarExampleState
             icon: Icon(Icons.school),
             label: 'no, a mi',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.cabin),
+            label: 'a mi no',
+          ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.cyan,
         onTap: _onItemTapped,
       ),
     );
