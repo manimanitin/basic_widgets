@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'form_widget.dart';
 import 'list_view.dart';
+import 'radio_widget.dart';
+import 'single_child_widget.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -25,7 +27,7 @@ class DrawerWidget extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.format_align_center),
-          title: const Text('Form y form field'),
+          title: const Text('Form y FormField'),
           onTap: () {
             Navigator.push(
               context,
@@ -35,7 +37,7 @@ class DrawerWidget extends StatelessWidget {
         ),
         ListTile(
           leading: const Icon(Icons.list_alt),
-          title: const Text('list view'),
+          title: const Text('ListView'),
           onTap: () {
             Navigator.push(
               context,
@@ -43,13 +45,26 @@ class DrawerWidget extends StatelessWidget {
             );
           },
         ),
-        const ListTile(
-          leading: Icon(Icons.radio_button_checked),
-          title: Text('Radio'),
+        ListTile(
+          leading: const Icon(Icons.radio_button_checked),
+          title: const Text('Radio'),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const RadioWidget()),
+            );
+          },
         ),
-        const ListTile(
-          leading: Icon(Icons.fit_screen_outlined),
-          title: Text('single child scrollview'),
+        ListTile(
+          leading: const Icon(Icons.fit_screen_outlined),
+          title: const Text('SingleChildScrollView'),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const SingleChildWidget()),
+            );
+          },
         )
       ],
     ));

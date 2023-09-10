@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'package:lorem_ipsum/lorem_ipsum.dart';
-
-randomColor() {
-  return Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-}
+import 'random_color.dart';
 
 class ListViewWidget extends StatelessWidget {
   const ListViewWidget({super.key});
